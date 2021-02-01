@@ -23,6 +23,8 @@ ActiveRecord::Schema.define(version: 2021_02_01_194944) do
   create_table "reviews", force: :cascade do |t|
     t.text "content"
     t.float "rating"
+    t.integer "user_id"
+    t.integer "restaurant_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
