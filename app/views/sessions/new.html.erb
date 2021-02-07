@@ -1,13 +1,7 @@
 <h1>Login</h1>
 
-<%= form_for :user do |f| %>
-
-    <%= f.label :username %>
-    <%= f.text_field :username %>
-    <br>
-    <%= f.label :password %>
-    <%= f.password_field :password %>
-    <br>
-    <%= f.submit "Submit" %>
-
+<%= form_with url: "/login", method: :get do |form| %>
+    <%= form.label :email_address, "Enter Username" %>
+    <%= form.text_field :username %>
+    <%= form.submit "Login" %>
 <% end %>
