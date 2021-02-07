@@ -1,7 +1,7 @@
 <h1>Login</h1>
 
 <%= form_with url: login_path do |form| %>
-    <%= form.label :email_address, "Enter Username" %>
+    <%= form.label :username, "Enter Username" %>
     <%= form.text_field :username %>
     <%= form.submit "Login" %>
 <% end %>
