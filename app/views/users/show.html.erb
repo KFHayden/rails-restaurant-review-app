@@ -1,9 +1,7 @@
 <h1>Hello There, <%= @user.username %>!</h1>
 
-<%= form_tag('/logout', method: 'delete') do %>
-
-    <%= submit_tag "Logout" %>
-
-<% end %>
-
+<%= link_to "Restaurants", restaurants_path %>
+<br>
+<%= link_to "Reviews", reviews_path %>
+<br>
 <%= link_to "Logout", logout_path, method: "delete" %>
