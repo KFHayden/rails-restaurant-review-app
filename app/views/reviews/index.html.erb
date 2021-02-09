@@ -1,0 +1,7 @@
+<h1>Written Reviews</h1>
+
+<% @reviews.each do |rev| %>
+    <%= rev.content %>
+    <br>
+    <%= rev.rating %>
+<% end %>

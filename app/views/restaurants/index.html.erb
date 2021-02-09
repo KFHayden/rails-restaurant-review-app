@@ -1,0 +1,9 @@
+<h1>Restaurants</h1>
+
+<% @restaurants.each do |rest| %>
+    <%= rest.name %>
+    <br>
+    <%= rest.style %>
+    <br>
+    <%= rest.average_rating %>
+<% end %>
