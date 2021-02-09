@@ -5,6 +5,7 @@ class ReviewsController < ApplicationController
     end
 
     def show
+        @review = Review.find_by_id(params[:id])
     end 
 
     def new
@@ -12,6 +13,8 @@ class ReviewsController < ApplicationController
     end 
 
     def create
+        @review = Review.create(review_params)
+        redirect_to review_path
     end
 
     def edit
