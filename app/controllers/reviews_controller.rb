@@ -8,6 +8,7 @@ class ReviewsController < ApplicationController
     end 
 
     def new
+        @review = Review.new
     end 
 
     def create
@@ -17,6 +18,12 @@ class ReviewsController < ApplicationController
     end
 
     def destroy
+    end
+
+    private
+
+    def review_params
+        params.require(:review).permit(:content, :rating, :user_id, :restaurant_id)
     end
 
 end
