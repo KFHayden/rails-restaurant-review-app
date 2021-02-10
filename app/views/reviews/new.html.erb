@@ -1,0 +1,13 @@
+<h1>Write a new review!</h1>
+
+<%= form_for(@review) do |f| %>
+
+    <%= f.label "Restaurant" %>
+    <%= f.collection_select :restaurant_id, @restaurants, :id, :name %>
+    <br>
+    <%= f.label "What did you think?" %>
+    <%= f.text_area :content %>
+    <br>
+    <%= f.submit "Submit" %>
+
+<% end %>

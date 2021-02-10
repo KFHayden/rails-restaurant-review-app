@@ -10,6 +10,7 @@ class ReviewsController < ApplicationController
 
     def new
         @review = Review.new
+        @restaurants = Restaurant.all
     end 
 
     def create
